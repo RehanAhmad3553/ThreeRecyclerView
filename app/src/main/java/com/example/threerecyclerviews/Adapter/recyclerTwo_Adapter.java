@@ -29,7 +29,7 @@ private List<ModelClass_recycler2> modelClassRecycler2;
 
     @Override
     public myViewHolder onCreateViewHolder( ViewGroup parent, int viewType) {
-        View mview= LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_design,parent,false);
+        View mview= LayoutInflater.from(parent.getContext()).inflate(R.layout.recyceler2_design,parent,false);
         return new myViewHolder(mview);
     }
 

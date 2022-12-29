@@ -11,13 +11,26 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/myrecyclerView"
+        android:layout_marginTop="10dp"
 
         />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="15dp"
         android:layout_height="wrap_content"
+
+
         android:id="@+id/myrecyclerView2"
         />
+
+       <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/myrecyclerView3"
+        />
+
+
+
 </LinearLayout>

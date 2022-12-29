@@ -10,8 +10,10 @@ import android.os.Bundle;
 import android.widget.Adapter;
 
 import com.example.threerecyclerviews.Adapter.recyclerOne_Adapter;
+import com.example.threerecyclerviews.Adapter.recyclerThree_Adapter;
 import com.example.threerecyclerviews.Adapter.recyclerTwo_Adapter;
 import com.example.threerecyclerviews.ModelClass.ModelClass_recycler2;
+import com.example.threerecyclerviews.ModelClass.ModelClass_recycler3;
 import com.example.threerecyclerviews.ModelClass.Modelclass_recycler1;
 import com.example.threerecyclerviews.R;
 
@@ -19,24 +21,33 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+  //1st Recycler View
+
     RecyclerView recyclerView;
     List<Modelclass_recycler1> modelrecycle;
     Modelclass_recycler1 modelR1;
 
-
+    //2nd Recycler View
     RecyclerView recyclerView2;
     List<ModelClass_recycler2> modelrecycle2;
     ModelClass_recycler2 modelR2;
 
+    //3rd Recycler View
+    RecyclerView recyclerView3;
+    List<ModelClass_recycler3> modelrecycler3;
+    ModelClass_recycler3 modelR3;
 
-    @SuppressLint("MissingInflatedId")
+
+//1st recycler coding
+    @SuppressLint({"MissingInflatedId", "WrongViewCast"})
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         recyclerView = findViewById(R.id.myrecyclerView);
         recyclerView2 = findViewById(R.id.myrecyclerView2);
-
+       recyclerView3=findViewById(R.id.myrecyclerView3);
 
         StaggeredGridLayoutManager staggeredGridLayoutManager = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.HORIZONTAL);
 
@@ -65,8 +76,11 @@ public class MainActivity extends AppCompatActivity {
         modelrecycle.add(modelR1);
         modelR1 = new Modelclass_recycler1("FootBall", R.drawable.ic_football);
         modelrecycle.add(modelR1);
+
         recyclerOne_Adapter recyclerOneAdapter = new recyclerOne_Adapter(MainActivity.this, modelrecycle);
         recyclerView.setAdapter(recyclerOneAdapter);
+
+
 
 
         //Second Recycler Coding
@@ -101,6 +115,36 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerTwo_Adapter recyclerTwoAdapter = new recyclerTwo_Adapter(MainActivity.this, modelrecycle2);
         recyclerView2.setAdapter(recyclerTwoAdapter);
+
+
+
+ //3rd Recycler Coding
+
+        StaggeredGridLayoutManager staggeredGridLayoutManager3 = new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.HORIZONTAL);
+        recyclerView3.setLayoutManager(staggeredGridLayoutManager3);
+
+ modelrecycler3= new ArrayList<>();
+
+ modelR3=new ModelClass_recycler3("Jerry Rice",R.drawable.ic_baseball);
+ modelrecycler3.add(modelR3);
+ modelR3=new ModelClass_recycler3("Jim Brown",R.drawable.ic_baseball);
+ modelrecycler3.add(modelR3);
+ modelR3=new ModelClass_recycler3("Lawrence Taylor",R.drawable.ic_baseball);
+ modelrecycler3.add(modelR3);
+ modelR3=new ModelClass_recycler3("Joe Montana",R.drawable.ic_baseball);
+ modelrecycler3.add(modelR3);
+ modelR3=new ModelClass_recycler3("Harry Kane",R.drawable.ic_baseball);
+ modelrecycler3.add(modelR3);
+ modelR3=new ModelClass_recycler3("Kylian Mbappe ",R.drawable.ic_baseball);
+ modelrecycler3.add(modelR3);
+ modelR3=new ModelClass_recycler3("Harry Kane",R.drawable.ic_baseball);
+ modelrecycler3.add(modelR3);
+ modelR3=new ModelClass_recycler3("Sadio Mane",R.drawable.ic_baseball);
+ modelrecycler3.add(modelR3);
+
+
+        recyclerThree_Adapter recyclerThreeAdapter=new recyclerThree_Adapter(MainActivity.this,modelrecycler3);
+        recyclerView3.setAdapter(recyclerThreeAdapter);
     }
 
 }
