@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.widget.Adapter;
+import android.widget.Toast;
 
 import com.example.threerecyclerviews.Adapter.recyclerOne_Adapter;
 import com.example.threerecyclerviews.Adapter.recyclerThree_Adapter;
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView.setLayoutManager(staggeredGridLayoutManager);
 
-
+        Toast.makeText(this, "adding toast", Toast.LENGTH_SHORT).show();
 
         /*GridLayoutManager gridLayoutManager=new GridLayoutManager(MainActivity.this,1);
         recyclerView.setLayoutManager(gridLayoutManager);*/
