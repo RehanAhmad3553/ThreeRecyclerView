@@ -24,9 +24,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
   //1st Recycler View
 
-    RecyclerView recyclerView;
-    List<Modelclass_recycler1> modelrecycle;
-    Modelclass_recycler1 modelR1;
+    //write your code here
 
     //2nd Recycler View
     RecyclerView recyclerView2;
